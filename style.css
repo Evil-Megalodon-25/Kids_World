@@ -12,7 +12,7 @@ header {
 }
 
 .navbar {
-  background: #f1f1f1;
+  background: orange;
   padding: 10px;
 }
 
@@ -125,7 +125,7 @@ footer {
 
 /* Basic navbar styling */
 .navbar {
-  background: #f1f1f1;
+  background: orange;
   padding: 10px;
 }
 
@@ -165,7 +165,7 @@ footer {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: #f1f1f1;
+    background: orange;
     position: absolute;
     top: 50px;
     left: 0;
