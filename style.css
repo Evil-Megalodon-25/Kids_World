@@ -11,16 +11,23 @@ header {
   padding: 20px;
 }
 
-nav {
-  background: orange;
-  text-align: center;
+.navbar {
+  background: #f1f1f1;
   padding: 10px;
 }
 
-nav a {
-  margin: 0 15px;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
   text-decoration: none;
-  color: black;
+  color: #000;
   font-weight: bold;
 }
 
@@ -175,4 +182,43 @@ footer {
 /* Hide checkbox */
 #menu-toggle {
   display: none;
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #f1f1f1;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1;
+  }
+
+  #menu-toggle:checked + .hamburger + .navbar .nav-links {
+    display: flex;
+  }
 }
