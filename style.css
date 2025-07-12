@@ -197,19 +197,24 @@ footer {
   display: none;
 }
 
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 20px;
+    left: 20px;
     z-index: 2;
+    background: orange;
+    color: white;
+    padding: 10px;
+    font-size: 26px;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
-    background: #f1f1f1;
+    background: orange;
     position: absolute;
     top: 60px;
     left: 0;
@@ -218,7 +223,7 @@ footer {
     z-index: 1;
   }
 
-  #menu-toggle:checked + .hamburger + .navbar .nav-links {
+  #menu-toggle:checked ~ .navbar .nav-links {
     display: flex;
   }
 }
