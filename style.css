@@ -182,7 +182,7 @@ footer {
     background: #FFDB58;
     width: 100%;
     position: absolute;
-    top: 100%;
+    top: 60px;
     left: 0;
     padding: 10px 0;
     transition: max-height 0.3s ease, opacity 0.3s ease;
@@ -215,25 +215,6 @@ footer {
 
 .nav-links {
   transition: all 0.3s ease;
-}
-
-.hamburger::before,
-.hamburger::after {
-  content: '';
-  display: block;
-  height: 2px;
-  width: 24px;
-  background: black;
-  margin: 6px 0;
-  transition: 0.3s;
-}
-
-#menu-toggle:checked + .hamburger::before {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-#menu-toggle:checked + .hamburger::after {
-  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 #menu-toggle:checked + .hamburger {
