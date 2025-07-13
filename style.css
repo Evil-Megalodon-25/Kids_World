@@ -225,3 +225,21 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 
+.menu-icon,
+.close-icon {
+  display: inline-block;
+  font-size: 26px;
+  transition: opacity 0.3s ease;
+}
+
+#menu-toggle:checked + .hamburger .menu-icon {
+  display: none;
+}
+
+#menu-toggle:checked + .hamburger .close-icon {
+  display: inline-block;
+}
+
+.hamburger .close-icon {
+  display: none;
+}
