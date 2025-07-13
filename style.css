@@ -218,24 +218,24 @@ footer {
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #FFDB58;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    padding: 10px 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-  }
+  display: flex;
+  flex-direction: column;
+  background: #FFDB58;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  position: relative; /* Changed from absolute */
+}
+
 
   #menu-toggle:checked ~ .navbar .nav-links {
-    display: flex;
     max-height: 500px;
     opacity: 1;
+    padding: 10px 0;
   }
 
   .nav-links li a {
@@ -243,6 +243,7 @@ footer {
     margin: 10px auto;
     width: 80%;
     text-align: center;
+    transition: all 0.3s ease-in-out;
   }
 
   .logo {
@@ -252,10 +253,6 @@ footer {
   .fade-slideshow, .fade-img {
     height: 200px;
   }
-}
-
-.nav-links {
-  transition: all 0.3s ease;
 }
 
 #menu-toggle:checked + .hamburger {
