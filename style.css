@@ -165,7 +165,7 @@ footer {
     z-index: 15;
   }
 
-  #menu-toggle:checked + .hamburger + .navbar .nav-links {
+  .navbar #menu-toggle:checked ~ .nav-links {
     display: flex;
   }
 
@@ -184,3 +184,35 @@ footer {
     height: 200px;
   }
 }
+
+.nav-links {
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 24px;
+  background: black;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+#menu-toggle:checked + .hamburger::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked + .hamburger::after {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+#menu-toggle:checked + .hamburger {
+  font-size: 0; /* Hide the ≡ icon */
+}
+
+.nav-links li a {
+  transition: all 0.3s ease-in-out;
+}
+
