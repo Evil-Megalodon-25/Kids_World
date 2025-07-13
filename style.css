@@ -91,14 +91,13 @@ h1, p {
   height: 350px;
   object-fit: cover;
   opacity: 0;
-  transition: transform 0.3s ease-in-out;
-  pointer-events: none;
+  transition: transform 0.4s ease-in-out;
   animation: fadeAnim 15s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .fade-img:hover {
   transform: scale(1.05);
-  pointer-events: auto;
 }
 
 .fade-img:nth-child(1) { 
@@ -112,9 +111,9 @@ h1, p {
 }
 
 @keyframes fadeAnim {
-  0%, 100% { opacity: 0; pointer-events: auto; }
-  8%, 25% { opacity: 1; pointer-events: auto; }
-  33% { opacity: 0; pointer-events: auto; }
+  0%, 100% { opacity: 0; }
+  8%, 25% { opacity: 1; }
+  33% { opacity: 0; }
 }
 
 /* Sections */
