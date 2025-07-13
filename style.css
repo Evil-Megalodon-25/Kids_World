@@ -169,6 +169,9 @@ footer {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+  header {
+    position: relative;
+  }
   .hamburger {
     display: block;
   }
@@ -179,17 +182,16 @@ footer {
     background: #FFDB58;
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     padding: 10px 0;
-    z-index: 10;
     transition: max-height 0.3s ease, opacity 0.3s ease;
     max-height: 0;
     opacity: 0;
     overflow: hidden;
   }
 
-  .navbar #menu-toggle:checked ~ .nav-links {
+  #menu-toggle:checked ~ .navbar .nav-links {
     display: flex;
     max-height: 500px;
     opacity: 1;
