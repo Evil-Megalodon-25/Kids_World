@@ -112,17 +112,17 @@ h1, p {
 }
 
 @keyframes fadeAnim {
-  0%, 4% { 
+  0%, 33.33% { 
     opacity: 0; 
     z-index: 0;
     pointer-events: auto; 
   }
-  5%, 32% { 
+  8.33%, 25% { 
     opacity: 1; 
     z-index: 1;
     pointer-events: auto; 
   }
-  33%, 100% { 
+  33.34%, 100% { 
     opacity: 0; 
     z-index: 0;
     pointer-events: auto; 
