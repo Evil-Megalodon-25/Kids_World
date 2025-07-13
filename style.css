@@ -91,9 +91,9 @@ h1, p {
   height: 350px;
   object-fit: cover;
   opacity: 0;
-  animation: fadeAnim 12s infinite;
   transition: transform 0.4s ease-in-out;
   pointer-events: none;
+  animation: fadeAnim 18s ease-in-out infinite;
 }
 
 .fade-img:hover {
@@ -103,21 +103,18 @@ h1, p {
 
 .fade-img:nth-child(1) { 
   animation-delay: 0s;
-   z-index: 1;
 }
 .fade-img:nth-child(2) { 
   animation-delay: 4s; 
-  z-index: 2;
 }
 .fade-img:nth-child(3) { 
   animation-delay: 8s; 
-  z-index: 3;
 }
 
 @keyframes fadeAnim {
-  0%, 100% { opacity: 0; }
-  8%, 25% { opacity: 1; }
-  33% { opacity: 0; }
+  0%, 100% { opacity: 0; pointer-events: auto; }
+  8%, 25% { opacity: 1; pointer-events: auto; }
+  33% { opacity: 0; pointer-events: auto; }
 }
 
 /* Sections */
