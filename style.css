@@ -60,20 +60,61 @@ h1, p {
   transform: scale(1.05);
 }
 
-/* Hamburger */
+/* Hamburger base */
 .hamburger {
-  display: none;
-  font-size: 26px;
-  padding: 10px;
-  cursor: pointer;
-  background: #FFDB58;
-  border-radius: 5px;
+  width: 30px;
+  height: 22px;
   position: fixed;
-  top: 12px;
-  left: 12px;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
   z-index: 100;
-  border: none;
+  display: block;
 }
+
+.hamburger span,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #000;
+  border-radius: 3px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Center line */
+.hamburger span {
+  top: 9px;
+}
+
+/* Top line */
+.hamburger::before {
+  top: 0;
+}
+
+/* Bottom line */
+.hamburger::after {
+  bottom: 0;
+}
+
+/* Animate to X on toggle */
+#menu-toggle:checked + .hamburger::before {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+#menu-toggle:checked + .hamburger::after {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+#menu-toggle:checked + .hamburger span {
+  opacity: 0;
+}
+
 
 /* Slideshow */
 .fade-slideshow {
@@ -225,21 +266,3 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 
-.menu-icon,
-.close-icon {
-  display: inline-block;
-  font-size: 26px;
-  transition: opacity 0.3s ease;
-}
-
-#menu-toggle:checked + .hamburger .menu-icon {
-  display: none;
-}
-
-#menu-toggle:checked + .hamburger .close-icon {
-  display: inline-block;
-}
-
-.hamburger .close-icon {
-  display: none;
-}
