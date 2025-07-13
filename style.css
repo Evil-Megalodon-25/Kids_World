@@ -98,6 +98,7 @@ h1, p {
 
 .fade-img:hover {
   transform: scale(1.05);
+  pointer-events: auto;
 }
 
 .fade-img:nth-child(1) { 
@@ -111,14 +112,12 @@ h1, p {
 .fade-img:nth-child(3) { 
   animation-delay: 8s; 
   z-index: 3;
-}{
-  pointer-events: auto;
 }
 
 @keyframes fadeAnim {
-  0%, 100% { opacity: 1; z-index: 1; }
-  8%, 25% { opacity: 1; z-index: 1; }
-  33% { opacity: 1;  z-index: 1;}
+  0%, 100% { opacity: 1; }
+  8%, 25% { opacity: 1; }
+  33% { opacity: 1; }
 }
 
 /* Sections */
