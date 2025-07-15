@@ -316,7 +316,8 @@ footer {
 
 .hero-logo {
   text-align: center;
-  margin: 40px 0 20px; /* pushes down below fixed nav */
+  padding-top: 100px;
+  margin: 0 0 20px; /* pushes down below fixed nav */
 }
 
 .hero-logo img {
