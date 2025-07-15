@@ -11,82 +11,109 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
-.header {
-  background: linear-gradient(to right, #a2d4f6, #d0eaff);
-  padding: 15px;
-  text-align: center;
-  position: sticky;
+/* 🔁 NAVBAR CSS - REPLACE OLD NAVBAR STYLES */
+.navbar {
+  background: #FFDB58;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.logo {
-  width: 80px;
-}
-.school-name {
-  font-size: 24px;
-  margin: 10px 0;
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Nav */
-.hamburger {
-  display: none;
-  width: 30px;
-  cursor: pointer;
-  margin: 10px auto;
-  position: relative;
+.nav-logo {
+  height: 50px;
+  width: auto;
 }
-.hamburger span,
-.hamburger::before,
-.hamburger::after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 100%;
-  background: #000;
-  margin: 6px 0;
-  transition: 0.3s;
-}
+
 .nav-links {
+  list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 10px 0;
+  gap: 25px;
 }
-.nav-links a {
+
+.nav-links li a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 25px;
   background: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
-.nav-links a:hover {
+
+.nav-links li a:hover {
   background: #fff2aa;
   transform: scale(1.05);
 }
 
-/* Mobile Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  z-index: 1010;
+}
+
+.hamburger span,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #000;
+  border-radius: 2px;
+  transition: 0.3s ease-in-out;
+}
+
+.hamburger span {
+  top: 9px;
+}
+.hamburger::before {
+  top: 0;
+}
+.hamburger::after {
+  bottom: 0;
+}
+
 #menu-toggle {
   display: none;
 }
+
+/* 🔁 MOBILE MENU DROPDOWN */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
-    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
     background: #FFDB58;
-    padding: 10px 0;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 15px 0;
   }
-  #menu-toggle:checked ~ .nav-links {
+
+  #menu-toggle:checked + .hamburger + .nav-links {
     display: flex;
   }
+
   .hamburger {
     display: block;
   }
 }
+
 
 /* Slideshow */
 .fade-slideshow {
