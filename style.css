@@ -310,3 +310,19 @@ footer {
 .contact-card a:hover {
   text-decoration: underline;
 }
+
+.hero-logo {
+  text-align: center;
+  margin: 100px 0 30px; /* pushes down below fixed nav */
+}
+
+.hero-logo img {
+  max-width: 300px;
+  width: 80%;
+}
+
+.hero-logo h2 {
+  font-size: 24px;
+  margin-top: 10px;
+  font-weight: bold;
+}
