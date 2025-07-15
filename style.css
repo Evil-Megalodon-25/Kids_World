@@ -232,3 +232,32 @@ footer {
 .download-btn:hover {
   background: #ffe680;
 }
+
+/* Contact Page */
+.contact-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+.contact-card {
+  background: #fff0f0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+.contact-card a:hover {
+  text-decoration: underline;
+}
