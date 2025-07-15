@@ -193,3 +193,42 @@ footer {
   transform: scale(1.05);
 }
 
+/* Programs Page */
+.programs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+.programs .card {
+  width: 200px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff5c0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.programs .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Download Button */
+.download {
+  text-align: center;
+  margin: 20px;
+}
+.download-btn {
+  background: #ffcc00;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background 0.3s ease;
+}
+.download-btn:hover {
+  background: #ffe680;
+}
