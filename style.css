@@ -374,3 +374,72 @@ footer {
   font-weight: bold;
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.about-card {
+  background: #ffeeee;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.read-more {
+  font-size: 12px;
+  color: #0077b6;
+  font-weight: bold;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: none;
+  z-index: 999;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-box {
+  position: relative;
+  margin: 80px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 500px;
+  z-index: 1000;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Show modal when checkbox is checked */
+#modal-who:checked ~ #content-who,
+#modal-vision:checked ~ #content-vision,
+#modal-mission:checked ~ #content-mission,
+#modal-philosophy:checked ~ #content-philosophy {
+  display: block;
+}
