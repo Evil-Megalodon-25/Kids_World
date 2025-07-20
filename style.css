@@ -407,26 +407,54 @@ footer {
 .modal {
   position: fixed;
   top: 0; left: 0;
-  width: 100%; height: 100%;
+  width: 100vw; height: 100vh;
   display: none;
   z-index: 999;
 }
 
+/* Blur and darken background */
 .overlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
 }
 
+/* Magnified modal box */
 .modal-box {
   position: relative;
-  margin: 80px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  max-width: 500px;
+  margin: 10vh auto;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  max-width: 700px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   z-index: 1000;
+  animation: zoomIn 0.4s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #444;
 }
 
 .close-btn {
@@ -442,4 +470,8 @@ footer {
 #modal-mission:checked ~ #content-mission,
 #modal-philosophy:checked ~ #content-philosophy {
   display: block;
+}
+.about-card:hover {
+  transform: scale(1.02);
+  background: #ffe5e5;
 }
