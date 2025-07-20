@@ -170,6 +170,32 @@ body {
   margin-top: 15px;
   color: #0077b6;
 }
+.about-item {
+  background: #fff0f0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.about-item summary {
+  font-weight: bold;
+  font-size: 18px;
+  color: #0077b6;
+  cursor: pointer;
+  list-style: none;
+}
+
+.about-item[open] {
+  background: #ffe9e9;
+}
+
+.about-item p {
+  margin-top: 10px;
+  line-height: 1.5;
+  color: #333;
+}
 
 /* Footer */
 footer {
